@@ -78,7 +78,7 @@ void updateRecord(){
     int roll;
     bool found = false;
     Student s;
-    fstream file("students.dat", ios::binary | ios::in | ios::out);
+    fstream file("student.dat", ios::binary | ios::in | ios::out);
     cout << "Enter the Roll No. to update : ";
     cin >> roll;
 
@@ -104,7 +104,7 @@ void updateRecord(){
 void deleteRecord(){
     int roll;
     Student s;
-    ifstream inFile("students.dat", ios::binary);
+    ifstream inFile("student.dat", ios::binary);
     ofstream outFile("temp.dat", ios::binary);
     cout << "Enter Roll No. to detele : ";
     cin >> roll;
