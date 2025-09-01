@@ -82,7 +82,7 @@ void updateRecord(){
     cout << "Enter the Roll No. to update : ";
     cin >> roll;
 
-    while(!file.eof() && !found){
+    while(file.read(reinterpret_cast<char*>(&s), sizeof(Student))){
         streampos pos = file.tellg();
         file.read(reinterpret_cast<char*>(&s), sizeof(Student));
         if(s.roll_no == roll){
